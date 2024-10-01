@@ -1,0 +1,18 @@
+table{
+    text-align: left;
+    color: rgb(7, 1, 12);
+    border-collapse: collapse;
+}
+img{
+    height: 100px;
+    width: 100px;
+}
+table td , table th{
+    border: 1px solid rgb(7, 1, 12);
+    padding: 10px;
+    min-width: 160pxs;
+}
+
+table tr{
+    cursor: pointer
+}
