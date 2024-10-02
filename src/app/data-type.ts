@@ -3,7 +3,5 @@ export interface item{
     price:number,
     image:string,
     description:string,
-    id:number,
-    quantity:undefined | number,
-    productId:undefined|number
+    id:number
   }

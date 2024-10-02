@@ -18,3 +18,7 @@ table td , table th{
 table tr{
     cursor: pointer
 }
+.adjust-update-link
+{
+    margin-left: 10px;
+}
