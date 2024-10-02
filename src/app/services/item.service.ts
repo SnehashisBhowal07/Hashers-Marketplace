@@ -12,4 +12,13 @@ export class ItemService {
   {
     return this.http.get<item[]>('http://localhost:3000/products');
   }
+
+  additionProduct(data:item){
+    return this.http.post('http://localhost:3000/products',data);
+  }
+
+  deleteProduct(id:number)
+  {
+    return this.http.delete(`http://localhost:3000/products/${id}`)
+  }
 }

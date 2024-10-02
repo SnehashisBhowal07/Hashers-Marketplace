@@ -13,11 +13,25 @@ import { RouterModule } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
  itemList : undefined | item[]
+ deleteMessage: undefined | string;
 
   constructor(private itemService: ItemService) {}
 
   ngOnInit(): void {
     this.loadItems();
+  }
+
+  deleteProduct(id: number) {
+    console.warn('test id', id);
+    this.itemService.deleteProduct(id).subscribe((result) => {
+      if (result) {
+        this.deleteMessage = 'Product is deleted';
+        this.loadItems();
+      }
+    });
+    setTimeout(() => {
+      this.deleteMessage = undefined;
+    }, 3000);
   }
 
   loadItems(): void {
