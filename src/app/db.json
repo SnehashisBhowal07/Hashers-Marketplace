@@ -1,0 +1,18 @@
+{
+  "products": [
+    {
+      "name": "iphone 16",
+      "price": "79500",
+      "description": "An apple product",
+      "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQIMXe2AeMtSQiD_bR3TJhWhHWmEvTT5QdM7fuBkxp_8QMqeGPvAixXwWWiM5Hg39r8YhevQ3dEmci27X6zH6NZsVcehsdoVMDgNCyvNviAVbPE31icQn6S90u9",
+      "id": "7f72"
+    },
+    {
+      "name": "Air jordan",
+      "price": "8000",
+      "description": "Just do it",
+      "image": "https://images.vegnonveg.com/resized/700X573/11056/air-jordan-1-mid-whitegreen-glow-black-white-6634811387dce.jpg",
+      "id": "24ed"
+    }
+  ]
+}
