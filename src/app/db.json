@@ -1,4 +1,12 @@
 {
+  "users": [
+    {
+      "id": "6678",
+      "username": "Rohit",
+      "email": "rohit@gmail.com",
+      "password": "gxs3e@q"
+    }
+  ],
   "products": [
     {
       "name": "iphone 16",
