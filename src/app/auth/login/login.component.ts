@@ -23,7 +23,7 @@ export class LoginComponent {
   }
 
   onSubmit(): void{
-    debugger;
+    
     if(this.loginForm.valid){
       this.authService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe({
         next: () => {
