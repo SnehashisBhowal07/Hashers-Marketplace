@@ -1,9 +1,16 @@
+
+.product-list{
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
 table{
-    text-align: left;
+    text-align: center;
     color: rgb(7, 1, 12);
     border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 img{
     height: 100px;
@@ -15,7 +22,7 @@ table td , table th{
     min-width: 160pxs;
 }
 
-table tr{
+button{
     cursor: pointer
 }
 .adjust-update-link
