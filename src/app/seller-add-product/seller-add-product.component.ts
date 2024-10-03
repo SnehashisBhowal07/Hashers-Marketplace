@@ -3,11 +3,12 @@ import { FormsModule } from '@angular/forms';
 import { ItemService } from '../services/item.service';
 import { item } from '../data-type';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-seller-add-product',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule,CommonModule],
   templateUrl: './seller-add-product.component.html',
   styleUrl: './seller-add-product.component.css'
 })
