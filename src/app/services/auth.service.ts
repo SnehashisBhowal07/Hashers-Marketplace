@@ -20,25 +20,6 @@ export class AuthService {
   }
 
   login(email: string, password: string): Observable<User>{
-    /*debugger;
-    var userDetails = this.http.get(`${this.baseUrl}?email=${email}&password=${password}`,
-      {observe:'response'}
-    ).subscribe((result)=>{
-      console.warn(result);
-    });
-    var userDetails1 = this.http.get<User[]>(`${this.baseUrl}?email=${email}&password=${password}`)
-    .pipe(
-      map(users => {
-        if(users.length > 0){
-          localStorage.setItem('currentUser', JSON.stringify(users[0]));
-          this.currentUserSubject.next(users[0]);
-          return users[0];
-        }
-        else{
-          throw new Error('Invalid login');
-        }
-      })
-    );*/
     return this.http.get<User[]>(`${this.baseUrl}?email=${email}&password=${password}`)
       .pipe(
         map(users => {
