@@ -24,7 +24,6 @@ export class AuthService {
       .pipe(
         map(users => {
           if(users.length > 0){
-            debugger;
             localStorage.setItem('currentUser', JSON.stringify(users[0]));
             this.currentUserSubject.next(users[0]);
             return users[0];

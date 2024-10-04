@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ItemService } from '../services/item.service';
 import { item } from '../data-type';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-seller-update-product',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule,CommonModule],
   templateUrl: './seller-update-product.component.html',
   styleUrl: './seller-update-product.component.css',
 })
@@ -16,7 +17,8 @@ export class SellerUpdateProductComponent implements OnInit {
   updateMessage: undefined | string;
   constructor(
     private route: ActivatedRoute,
-    private productService: ItemService
+    private productService: ItemService,
+    private router: Router
   ) {}
   ngOnInit(): void {
     let productId = this.route.snapshot.paramMap.get('id');
@@ -38,6 +40,8 @@ export class SellerUpdateProductComponent implements OnInit {
     });
     setTimeout(() => {
       this.updateMessage = undefined;
+      this.router.navigate(['/dashboard']);
     }, 3000);
+    
   }
 }

@@ -8,14 +8,19 @@
         placeholder="Product Name"
         name="name"
         ngModel="{{itemProductData?.name}}"
+        #updateProductName="ngModel"
+        required
       />
+      <p class="invalid-input"><span *ngIf="updateProductName.invalid && updateProductName.touched">Please enter product name</span></p>
       <input
         type="text"
         class="form-input"
         placeholder="Product Price"
         name="price"
         ngModel="{{itemProductData?.price}}"
+        #updateProductPrice="ngModel"
       />
+      <p class="invalid-input"><span *ngIf="updateProductPrice.invalid && updateProductPrice.touched">Please enter price</span></p>
       <textarea
         type="text"
         class="form-input"
@@ -30,7 +35,7 @@
         name="image"
         ngModel="{{itemProductData?.image}}"
       />
-      <button class="form-button" routerLink="/dashboard">Submit</button>
+      <button [disabled]="addProduct.invalid" class="form-button" routerLink="/dashboard">Submit</button>
     </form>
   </div>
   

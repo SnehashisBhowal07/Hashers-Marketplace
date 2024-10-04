@@ -23,3 +23,11 @@
     text-align: center;
     text-shadow: 2px 2px 5px green;
   }
+  .invalid-input{
+    color: red;
+    font-size: 12px;
+    margin-top: -20px;
+  }
+  button:disabled{
+    cursor: not-allowed;
+  }

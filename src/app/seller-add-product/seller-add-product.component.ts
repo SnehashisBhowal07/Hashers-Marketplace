@@ -2,17 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ItemService } from '../services/item.service';
 import { item } from '../data-type';
+import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-seller-add-product',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule,CommonModule],
   templateUrl: './seller-add-product.component.html',
   styleUrl: './seller-add-product.component.css'
 })
 export class SellerAddProductComponent implements OnInit{
   addProductMessage: string | undefined;
-  constructor(private product:ItemService){}
+  constructor(private product:ItemService, private router: Router){}
   ngOnInit(): void {
     
   }
@@ -25,6 +27,8 @@ export class SellerAddProductComponent implements OnInit{
       }
     });
     console.warn(this.addProductMessage)
-    setTimeout(() => {this.addProductMessage = undefined}, 5000);
+    setTimeout(() => {this.addProductMessage = undefined
+      this.router.navigate(['/dashboard']);
+    } , 3000);
   }
 }
