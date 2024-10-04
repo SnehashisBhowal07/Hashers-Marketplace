@@ -45,9 +45,14 @@ export class AuthService {
   }
 
   public isAuthenticated(): boolean{
-    if(localStorage.getItem('currentUser')){
-      return true;
+    try{
+      if(localStorage.getItem('currentUser')){
+        return true;
+      }
+      return false;
     }
-    return false;
+    catch(e){
+      return false;
+    }
   }
 }
